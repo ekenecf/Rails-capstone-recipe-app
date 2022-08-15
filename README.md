@@ -66,7 +66,7 @@ RSpec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/sentayhu19/Catalog-of-my-things/issues).
+Feel free to check the [issues page](https://github.com/ekenecf/Rails-capstone-recipe-app/issues).
 
 ## Show your support
 
