@@ -10,7 +10,7 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 
 ### Cloning the project
 
- git clone https://github.com/sentayhu19/Recipe-app <Your-Build-Directory>
+ git clone https://github.com/ekenecf/Rails-capstone-recipe-app.git <Your-Build-Directory>
 ``` 
 - cd Recipe-app
 - rails s
