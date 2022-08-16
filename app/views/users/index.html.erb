@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+<h1>Users :</h1>
+<div >
+<% @users.each do |user| %>
+ <%= render partial: "users/user", locals: {user: user} %>
+ 
+<% end %>
+<% end %>
+
+</div>
