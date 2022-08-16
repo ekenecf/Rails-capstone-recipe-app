@@ -1,2 +1,2 @@
-module UsersHelper # rubocop:todo Style/Documentation
+module UsersHelper
 end
