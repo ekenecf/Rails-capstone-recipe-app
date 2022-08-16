@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# rubocop:todo Lint/MissingCopEnableDirective
+# rubocop:disable Layout/LineLength
+# rubocop:enable Lint/MissingCopEnableDirective
+
 # Assuming you have not yet modified this file, each configuration option below
 # is set to its default value. Note that some are commented out while others
 # are not: uncommented lines are intended to protect your configuration from

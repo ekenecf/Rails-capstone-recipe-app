@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+# rubocop:todo Lint/MissingCopEnableDirective
+# rubocop:disable Style/Documentation
+# rubocop:enable Lint/MissingCopEnableDirective
+# rubocop:todo Lint/MissingCopEnableDirective
+# rubocop:disable Metrics/MethodLength
+# rubocop:enable Lint/MissingCopEnableDirective
+
 class DeviseCreateUsers < ActiveRecord::Migration[7.0]
   def change
     create_table :users do |t|

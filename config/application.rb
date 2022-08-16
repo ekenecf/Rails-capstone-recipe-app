@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# rubocop:todo Lint/MissingCopEnableDirective
+# rubocop:disable Style/Documentation
+# rubocop:enable Lint/MissingCopEnableDirective
+
 require_relative 'boot'
 
 require 'rails/all'
