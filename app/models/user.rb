@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -8,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :foods, foreign_key: 'user_id', dependent: :destroy
   has_many :recipes, foreign_key: 'user_id', dependent: :destroy
+
+  validates :name, presence: true
+  validates :email, presence: true
+  validates :password, presence: true
 end
