@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+<h1>Food lists :</h1>
+<div >
+
+<% if @foods.empty? %>
+<p>No food added yet!</p>
+<% end %>
+
+<p><%= link_to "Back to all users", users_path(@user) %></p>
+<%= link_to "Create new food", new_user_food_path(@user, @foods) %>
+
+<%  @foods.each do |food| %>
+<p>Name of food: <%= food.name %>
+<p>measurement_unit: <%= food.measurement_unit %>
+<p>Price of food: <%= food.price %>
+<p>Quantity of food: <%= food.quantity %>
+
+<%= button_to "Delete food", user_food_path(food.user, food), method: :delete %>
+
+
+<% end %>
+<% end %>
+
+</div>

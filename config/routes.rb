@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index show] do
     resources :foods, only: %i[index new create destroy]
-     resources :recipes, only: %i[index new create show destroy] do
+    resources :recipes, only: %i[index new create show destroy] do
       resources :recipe_foods, only: %i[new create]
     end
   end

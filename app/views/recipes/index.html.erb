@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+<h1>Recipe lists :</h1>
+<div >
+<%= link_to "Create new recipe", new_user_recipe_path(@user, @recipes) %>
+
+
+<%  @recipes.each do |recipe| %>
+<p><%= link_to "Back to all users", users_path(recipe.user) %></p>
+<p><%= link_to "Public recipes",  public_recipes_path(recipe) %></p>
+<p><%= link_to "Recipe detail", user_recipe_path(recipe.user, recipe) %></p>
+
+ <p>Recipe name: <%= recipe.name %>
+ <p>description: <%= recipe.description %> 
+
+ <%= button_to "Delete recipe", user_recipe_path(recipe.user, recipe), method: :delete %>
+<% end %>
+
+
+<% end %>
+
+</div>
+

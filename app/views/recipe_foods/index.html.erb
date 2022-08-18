@@ -1,0 +1,8 @@
+<div >
+<h2> Recipe Foods: </h2>
+
+<p><% @recipe_foods.each do |recipe_food|
+    <%= render partial: "recipes_food/index", locals: { recipe_food: recipe_food } %>
+<% end %>
+</p>
+</div>
