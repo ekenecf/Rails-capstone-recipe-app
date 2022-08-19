@@ -1,4 +1,4 @@
-class RecipesController < ApplicationController # rubocop:todo Style/Documentation
+class RecipesController < ApplicationController
   load_and_authorize_resource
 
   def index
@@ -15,7 +15,7 @@ class RecipesController < ApplicationController # rubocop:todo Style/Documentati
     @recipe_foods = RecipeFood.includes(:food, :recipe).where(recipe_id: params[:id])
   end
 
-  def create # rubocop:todo Metrics/MethodLength
+  def create
     user = User.find(params[:user_id])
     created_recipe = Recipe.new(recipe_params)
     created_recipe.user_id = user.id

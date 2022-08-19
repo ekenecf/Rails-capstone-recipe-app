@@ -1,5 +1,4 @@
-# rubocop:todo Style/Documentation
-class PublicRecipesController < ApplicationController # rubocop:todo Style/Documentation
+class PublicRecipesController < ApplicationController
   # rubocop:enable Style/Documentation
   def index # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
       # rubocop:todo Layout/IndentationWidth
