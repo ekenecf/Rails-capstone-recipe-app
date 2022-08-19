@@ -1,6 +1,6 @@
-# frozen_string_literal: true
-
 class RecipesController < ApplicationController # rubocop:todo Style/Documentation
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @recipes = Recipe.includes(:user).where(user: @user.id)

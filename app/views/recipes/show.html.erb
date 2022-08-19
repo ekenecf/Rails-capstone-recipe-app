@@ -12,11 +12,12 @@
  <% @recipe_foods.each do |recipe_food| %> 
     <p>Name: <%= recipe_food.food.name %> </p>
     <p>RecipeFood_Quantity: <%= recipe_food.quantity %> </p>
+    <p>RecipeFood_Value: <%= recipe_food.food.price %> </p>
     <% end %>
 
 <% if @recipe.user == current_user %>
   <div >
-     <%= link_to "Create New Recipe food", new_user_recipe_recipe_food_path(@recipe.user, @recipe, @recipe.recipe_foods) %>
+     <%= link_to "Create New food", new_user_food_path(@recipe.user, @recipe.recipe_foods) %>
   </div>
   <% end %>
 

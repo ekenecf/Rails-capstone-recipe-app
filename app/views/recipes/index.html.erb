@@ -7,12 +7,17 @@
 <%  @recipes.each do |recipe| %>
 <p><%= link_to "Back to all users", users_path(recipe.user) %></p>
 <p><%= link_to "Public recipes",  public_recipes_path(recipe) %></p>
+
+<% if can? :read, recipe %>
 <p><%= link_to "Recipe detail", user_recipe_path(recipe.user, recipe) %></p>
+<% end %>
 
  <p>Recipe name: <%= recipe.name %>
  <p>description: <%= recipe.description %> 
 
+ <% if can? :destroy, recipe %>
  <%= button_to "Delete recipe", user_recipe_path(recipe.user, recipe), method: :delete %>
+<% end %>
 <% end %>
 
 
