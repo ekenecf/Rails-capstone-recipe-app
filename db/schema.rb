@@ -42,7 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_816_105_222) do # rubocop:todo 
     t.float 'preparation_time'
     t.float 'cooking_time'
     t.text 'description'
-    t.string 'public'
+    t.boolean 'public'
     t.bigint 'user_id'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false

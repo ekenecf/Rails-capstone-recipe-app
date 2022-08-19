@@ -1,3 +1,5 @@
 
 <h2>Welcome <%= user.name %>! </h2>
-<%= link_to "Create new food", new_user_food_path(user, user.foods) %>
+<%= link_to "See all recipes", user_recipes_path(user, user.recipes) %>
+<%= link_to "See all foods", user_foods_path(user, user.foods) %>
+<%= link_to "Public recipes", public_recipes_path(user.recipes) %>
