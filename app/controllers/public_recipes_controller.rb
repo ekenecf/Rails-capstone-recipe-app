@@ -1,6 +1,5 @@
 class PublicRecipesController < ApplicationController
-  # rubocop:enable Style/Documentation
-  def index # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
+  def index
       # rubocop:todo Layout/IndentationWidth
       @recipes = Recipe.includes(:user).where(public: true).order(created_at: :desc)
       # rubocop:enable Layout/IndentationWidth
