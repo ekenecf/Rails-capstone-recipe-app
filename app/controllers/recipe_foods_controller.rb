@@ -7,7 +7,6 @@ class RecipeFoodsController < ApplicationController
   def new
     @recipe_food = RecipeFood.new # same as current_user.recipe_food.build
     @foods = Food.where(user_id: current_user.id)
-
   end
 
   def create
