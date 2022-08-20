@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resources :public_recipes, only: %i[index]
   resources :general_shopping_lists, only: %i[index]
 
+  resources :recipes, only: %i[index new create show destroy] do
+    resources :recipes_foods, only: %i[new create]
+  end
+
+
   resources :users, only: %i[index show] do
     resources :foods, only: %i[index new create destroy]
     resources :recipes, only: %i[index new create show destroy] do

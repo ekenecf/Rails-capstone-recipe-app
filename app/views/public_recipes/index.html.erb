@@ -2,12 +2,16 @@
 
 <% @public_recipes.each do |recipe| %>
 
+
+    <%= link_to recipe_path(recipe[:id]), method: :get do %>
+
     <p>Simple dish by: <%= recipe[:recipe_name] %> </p>
+
     <p>Recipe user_name: <%= recipe[:user].name %> </p>
     <p>Food items: <%= recipe[:food_items] %> </p>
     <p>Total price: <%= recipe[:total_price] %> </p>
 
 <% end %>
- <% @recipes.each do |rec| %>
-    <%= link_to "back to recipe details", user_recipes_path(rec.user, rec) %>
- <% end %>
+<% end %>
+
+ 

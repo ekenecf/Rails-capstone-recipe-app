@@ -1,6 +1,4 @@
 class RecipeFoodsController < ApplicationController
-  load_and_authorize_resource
-
   def index
     @user = User.find(params[:user_id])
     @recipe_foods = RecipeFood.includes(:user).where(user: @user.id)
@@ -8,6 +6,8 @@ class RecipeFoodsController < ApplicationController
 
   def new
     @recipe_food = RecipeFood.new # same as current_user.recipe_food.build
+    @foods = Food.where(user_id: current_user.id)
+
   end
 
   def create
