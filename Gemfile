@@ -3,15 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rubocop', '>=1.0', '<2.0'
 
-gem 'rspec-rails'
-
 gem 'rails-controller-testing'
 
 gem 'ffi', '~> 1.9', '>= 1.9.10'
 
 ruby '3.1.2'
 
-gem "bullet"
+gem 'bullet'
 
 gem 'devise'
 
@@ -64,10 +62,9 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
-  gem 'capybara'
-
 end
 
 group :development do
@@ -83,7 +80,6 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
