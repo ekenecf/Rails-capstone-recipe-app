@@ -1,10 +1,8 @@
 <% if user_signed_in? %>
-<h1>Users :</h1>
-<div >
-<% @users.each do |user| %>
- <%= render partial: "users/user", locals: {user: user} %>
- 
+ <h1>Users :</h1>
+ <h2>Welcome <%= current_user.name %>! </h2>
+<%= link_to "See all recipes", user_recipes_path(current_user, current_user.recipes) %>
+<%= link_to "See all foods", user_foods_path(current_user, current_user.foods) %>
+<%= link_to "See all shopping lists", general_shopping_lists_path %>
+<%= link_to "Public recipes", public_recipes_path(current_user.recipes) %>
 <% end %>
-<% end %>
-
-</div>
