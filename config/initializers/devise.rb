@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # rubocop:todo Lint/MissingCopEnableDirective
 # rubocop:disable Layout/LineLength
 # rubocop:enable Lint/MissingCopEnableDirective
