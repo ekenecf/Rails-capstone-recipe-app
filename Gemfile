@@ -5,6 +5,8 @@ gem 'rubocop', '>=1.0', '<2.0'
 
 gem 'rspec-rails'
 
+gem 'rails-controller-testing'
+
 gem 'ffi', '~> 1.9', '>= 1.9.10'
 
 ruby '3.1.2'
