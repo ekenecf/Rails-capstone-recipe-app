@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+# frozen_string_literal: true
+
 require 'active_support/core_ext/integer/time'
 
-Rails.application.configure do
+Rails.application.configure do # rubocop:todo Metrics/BlockLength
   config.after_initialize do
     Bullet.enable        = true
     Bullet.alert         = true
@@ -80,4 +82,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 end

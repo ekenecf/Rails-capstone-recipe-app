@@ -1,0 +1,7 @@
+<h2> General shopping lists: </h2>
+
+<% @recipe_foods_lists.each do |recipe_foods_list| %>
+    <%= render partial: "general_shopping_lists/index_general_shop_list", locals: { recipe_foods_list: recipe_foods_list } %>
+    <%= link_to "Back to all users", users_path %>
+
+<% end %>

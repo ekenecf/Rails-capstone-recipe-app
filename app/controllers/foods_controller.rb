@@ -1,4 +1,6 @@
-class FoodsController < ApplicationController
+# frozen_string_literal: true
+
+class FoodsController < ApplicationController # rubocop:todo Style/Documentation
   load_and_authorize_resource
 
   # GET /foods
@@ -13,7 +15,7 @@ class FoodsController < ApplicationController
   end
 
   # POST /foods
-  def create
+  def create # rubocop:todo Metrics/MethodLength
     user = User.find(params[:user_id])
     created_food = Food.new(food_params)
     created_food.user_id = user.id
