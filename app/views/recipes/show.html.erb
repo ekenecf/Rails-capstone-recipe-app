@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+<h1>Recipe list detail :</h1>
+<div >
+
+<p><%= link_to "Back to all recipes", user_recipes_path(@recipe.user, @recipe) %></p>
+ <p>Recipe name: <%= @recipe.name %> </p>
+ <p>Preparation_time: <%= @recipe.preparation_time %> </p>
+ <p>Cooking_time: <%= @recipe.cooking_time %> </p>
+ <p>Recipe description: <%= @recipe.description %> </p>
+ <p>Public: <%= @recipe.public %> </p>
+
+ <% @recipe_foods.each do |recipe_food| %> 
+    <p>Name: <%= recipe_food.food.name %> </p>
+    <p>RecipeFood_Quantity: <%= recipe_food.quantity %> </p>
+    <p>RecipeFood_Value: <%= recipe_food.food.price %> </p>
+    <% end %>
+
+<% if @recipe.user == current_user %>
+  <div >
+     <%= link_to "Create New food", new_user_food_path(@recipe.user, @recipe.recipe_foods) %>
+     <%= link_to "Ingredients", new_user_recipe_recipe_food_path(@recipe.user, @recipe, @recipe.recipe_foods) %>
+  </div>
+  <% end %>
+
+<% end %>
+
+</div>
