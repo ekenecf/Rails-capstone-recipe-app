@@ -18,7 +18,8 @@
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 
   <% else %>
-   <%= link_to "Sign in", new_user_session_path %>
+  <h1>Please click <%= link_to "Here", new_user_session_path %> to sign in and access this amazing app <h1>
+   
   <% end %>
 
     <%= yield %>
