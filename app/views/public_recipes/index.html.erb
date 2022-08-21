@@ -3,7 +3,7 @@
 <% @public_recipes.each do |recipe| %>
 
 
-    <%= link_to recipe_path(recipe[:id]), method: :get do %>
+    <%= link_to recipe_path(recipe[:id]) do %>
 
     <p>Simple dish by: <%= recipe[:recipe_name] %> </p>
 
