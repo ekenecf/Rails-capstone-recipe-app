@@ -1,8 +1,7 @@
 <% if user_signed_in? %>
 <h1>Recipe lists :</h1>
-<div >
+<div>
 <%= link_to "Create new recipe", new_user_recipe_path(@user, @recipes) %>
-
 
 <%  @recipes.each do |recipe| %>
 <p><%= link_to "Back to all users", users_path(recipe.user) %></p>
@@ -18,10 +17,8 @@
  <% if can? :destroy, recipe %>
  <%= button_to "Delete recipe", user_recipe_path(recipe.user, recipe), method: :delete %>
 <% end %>
-<% end %>
-
 
 <% end %>
 
+<% end %>
 </div>
-

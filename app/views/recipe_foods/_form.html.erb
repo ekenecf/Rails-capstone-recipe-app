@@ -1,10 +1,7 @@
 <%= form_with model: @recipe_food, url: user_recipe_recipe_foods_path, method: :post do |form| %>
-
     <div >
        <%= form.number_field :quantity, Placeholder: "Quantity"%>
        <%= form.select :food, @foods&.map {|food| [food.name, food.id]} %>
-
        <%= form.submit %>
      </div>
-
 <% end %>

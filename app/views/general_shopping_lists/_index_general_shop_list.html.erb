@@ -1,0 +1,10 @@
+<% recipe_foods_list.each do |recipe_food| %>
+
+<p>Amount to buy: <%= @total_food_item %>
+<P>Name of food: <%= recipe_food.food.name %></p>
+
+ <p>Price of food:   <%= @total_food_price %>
+
+<P>Quantity of food: <%= recipe_food.food.quantity %></p>
+
+<% end %>
