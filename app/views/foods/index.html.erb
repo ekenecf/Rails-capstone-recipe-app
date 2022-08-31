@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 <h1>Food lists :</h1>
-<div >
+<div>
 
 <% if @foods.empty? %>
 <p>No food added yet!</p>
@@ -17,8 +17,6 @@
 
 <%= button_to "Delete food", user_food_path(food.user, food), method: :delete %>
 
-
 <% end %>
 <% end %>
-
 </div>

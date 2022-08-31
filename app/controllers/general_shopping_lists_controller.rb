@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class GeneralShoppingListsController < ApplicationController
   def index # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
       @recipe_foods_lists = [] # rubocop:todo Layout/IndentationWidth

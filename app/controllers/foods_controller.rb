@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class FoodsController < ApplicationController
   load_and_authorize_resource
 
